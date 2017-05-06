@@ -23,12 +23,38 @@
 #include "interpreter.h"
 #include "visitor.h"
 
-int main(int argc, char* argv[])
+void TestSimpleFactory()
 {
+	// +
 	SimpleFactory factory;
 	Operation* oper = factory.CreateOperation("+");
 	oper->Set(1, 2);
-	oper->GetResult();
+	printf_s("%lf\n",oper->GetResult());
+	factory.DeleteOperation();
+
+	// /
+	try {
+		factory.CreateOperation("/");
+		oper->Set(1, 2);
+		printf_s("%lf\n", oper->GetResult());
+		
+		oper->Set(1, 0);
+		printf_s("%lf\n", oper->GetResult());
+
+	}
+	//type must be match with throw
+	catch (char* e) 
+	{
+		printf_s("%s\n", e);
+		factory.DeleteOperation();
+	}
+}
+
+int main(int argc, char* argv[])
+{
+
+	TestSimpleFactory();
+
 
 	Person p;
 	Trouser t;

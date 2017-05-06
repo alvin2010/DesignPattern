@@ -3,6 +3,9 @@
 #include <exception>
 using namespace std;
 
+//	简单工厂模式（simple factory）：
+//	根据不同的条件实例不同的对象
+//
 
 class Operation
 {
@@ -12,7 +15,7 @@ public:
 		num1_ = num1;
 		num2_ = num2;
 	}
-	virtual double GetResult() { return 0; }
+	virtual double GetResult() = 0;
 
 
 	double num1_;
@@ -58,7 +61,10 @@ class DivOperation : public Operation
 public:
 	double GetResult()
 	{
-		if (num2_ < 1e-6 && num2_ > -1e-6) throw "div by zero";
+		if (num2_ < 0.000001 && num2_ > -0.000001)
+		{
+			throw "div by zero";
+		}
 		double result = num1_ / num2_;
 		return result;
 	}
