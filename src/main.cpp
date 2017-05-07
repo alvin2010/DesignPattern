@@ -50,11 +50,28 @@ void TestSimpleFactory()
 	}
 }
 
+void TestStrategy()
+{
+	Context cont;
+	CashNormal normal;
+	cont.SetCash(&normal);
+	cont.GetResult();
+
+	CashRebate rebate;
+	cont.SetCash(&rebate);
+	cont.GetResult();
+
+	CashReturn ret;
+	cont.SetCash(&ret);
+	cont.GetResult();
+}
+
 int main(int argc, char* argv[])
 {
 
-	TestSimpleFactory();
+	//TestSimpleFactory();
 
+	TestStrategy();
 
 	Person p;
 	Trouser t;
@@ -63,7 +80,7 @@ int main(int argc, char* argv[])
 	s.Decorator(&t);
 	s.Show();
 
-
+	system("pause");
 	return 0;
 }
 
