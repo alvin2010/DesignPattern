@@ -1,9 +1,10 @@
 #pragma once
 #include <stdio.h>
 
-//	装饰模式（decorator）
-//
-//
+//	装饰模式（decorator）：动态给对象增加
+//	一些额外职责。
+//	向旧类中添加新代码，而增加的代码主要
+//	起修饰旧类的核心逻辑
 
 class Person
 {

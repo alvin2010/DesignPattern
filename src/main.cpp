@@ -66,6 +66,19 @@ void TestStrategy()
 	cont.GetResult();
 }
 
+void TestDecrator()
+{
+	Person xa(110);
+	
+	TShirt shirt;
+	Shoes  shoes;
+	Trouser trouser;
+	shirt.Decorator(&xa);
+	shoes.Decorator(&shirt);
+	trouser.Decorator(&shoes);
+	trouser.Show();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -73,12 +86,7 @@ int main(int argc, char* argv[])
 
 	TestStrategy();
 
-	Person p;
-	Trouser t;
-	t.Decorator(&p);
-	Shoes s;
-	s.Decorator(&t);
-	s.Show();
+	TestDecrator();
 
 	system("pause");
 	return 0;
