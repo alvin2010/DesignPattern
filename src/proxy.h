@@ -1,10 +1,11 @@
 #pragma once
-
-//	代理模式（Proxy）： 未其他对象提供代理
+#include <cstdio>
+#include <string>
+using namespace std;
+//	代理模式（Proxy）： 为其他对象提供代理
 //	以控制这个对象的访问权限
 //
-//
-//
+
 class IPersuer
 {
 public:
@@ -39,20 +40,25 @@ public:
 class Proxy : public IPersuer
 {
 private:
-	Persuer persuer_;
+	IPersuer* persuer_;
 public:
+	void SetPersuer(IPersuer* persuer)
+	{
+		persuer_ = persuer;
+	}
+
 	void SendFlower()
 	{
-		persuer_.SendFlower();
+		persuer_->SendFlower();
 	}
 
 	void SendFood()
 	{
-		persuer_.SendFood();
+		persuer_->SendFood();
 	}
 
 	void TellJoker()
 	{
-		persuer_.TellJoker();
+		persuer_->TellJoker();
 	}
 };

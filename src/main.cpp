@@ -79,15 +79,28 @@ void TestDecrator()
 	trouser.Show();
 }
 
+void TestProxy()
+{
+	Proxy proxy;
+	Persuer persuer;
+	proxy.SetPersuer(&persuer);
+
+	proxy.SendFlower();
+	proxy.SendFood();
+	proxy.TellJoker();
+}
+
 int main(int argc, char* argv[])
 {
 
 	//TestSimpleFactory();
 
-	TestStrategy();
+	//TestStrategy();
 
-	TestDecrator();
+	//TestDecrator();
 
+	TestProxy();
+	
 	system("pause");
 	return 0;
 }
