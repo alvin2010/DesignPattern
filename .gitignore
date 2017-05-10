@@ -27,3 +27,13 @@
 *.exe
 *.out
 *.app
+/Debug
+/Release
+
+
+# vs
+*.suo
+*.sdf
+*.opensdf
+*.sln
+/DesignPattern

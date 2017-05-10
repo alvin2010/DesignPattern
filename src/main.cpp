@@ -90,6 +90,25 @@ void TestProxy()
 	proxy.TellJoker();
 }
 
+void TestFactoryMethod()
+{
+	GraduateFactory factory;
+	LeiFeng* lf = factory.CreateLeifeng();
+	lf->Sing();
+	lf->Sweep();
+	lf->Wash();
+	factory.ReleaseLeifeng(lf);
+
+
+	VolunteerFactory factory1;
+	LeiFeng* lf1 = factory1.CreateLeifeng();
+	lf1->Sing();
+	lf1->Sweep();
+	lf1->Wash();
+	factory1.ReleaseLeifeng(lf1);
+
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -100,6 +119,8 @@ int main(int argc, char* argv[])
 	//TestDecrator();
 
 	TestProxy();
+
+	TestFactoryMethod();
 	
 	system("pause");
 	return 0;
