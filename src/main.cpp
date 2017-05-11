@@ -109,6 +109,19 @@ void TestFactoryMethod()
 
 }
 
+void TestPrototype()
+{
+	Resume res;
+	res.SetPersonalInfo("meimei", "18", "Ů");
+	res.SetExperience("tencent game!");
+	res.Display();
+
+
+	Resume* res1 = static_cast<Resume*>(res.Clone());
+	res1->Display();
+	delete res1;
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -122,6 +135,8 @@ int main(int argc, char* argv[])
 
 	TestFactoryMethod();
 	
+	TestPrototype();
+
 	system("pause");
 	return 0;
 }
