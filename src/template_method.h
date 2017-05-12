@@ -10,10 +10,7 @@ using namespace std;
 class TestPaper
 {
 public:
-	TestPaper(){}
 	virtual ~TestPaper(){}
-
-
 
 	void Question1()
 	{
@@ -30,20 +27,11 @@ public:
 		printf_s("Question3's answer is: %s\n", Answer3().c_str());
 	}
 
-	virtual string Answer1()
-	{
-		return "";
-	}
+	virtual string Answer1() = 0;
+	
+	virtual string Answer2() = 0;
 
-	virtual string Answer2()
-	{
-		return "";
-	}
-
-	virtual string Answer3()
-	{
-		return "";
-	}
+	virtual string Answer3() = 0;
 };
 
 class StudentAPaper : public TestPaper

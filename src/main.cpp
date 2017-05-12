@@ -122,6 +122,21 @@ void TestPrototype()
 	delete res1;
 }
 
+void TestTemplatemethod()
+{
+	TestPaper* p1 = new StudentAPaper;
+	p1->Question1();
+	p1->Question2();
+	p1->Question3();
+	delete p1;
+
+	TestPaper* p2 = new StudentBPaper;
+	p2->Question1();
+	p2->Question2();
+	p2->Question3();
+	delete p2;
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -136,6 +151,8 @@ int main(int argc, char* argv[])
 	TestFactoryMethod();
 	
 	TestPrototype();
+
+	TestTemplatemethod();
 
 	system("pause");
 	return 0;
