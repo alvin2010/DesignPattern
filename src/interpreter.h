@@ -35,7 +35,7 @@ public:
 		{
 			string key = content.substr(0,1);
 			string text = content.substr(1);
-			double value = stod(text);
+			double value = 0.00;//stod(text);
 			Excute(key, value);
 		}
 	}

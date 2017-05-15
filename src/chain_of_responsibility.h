@@ -60,7 +60,7 @@ class CommonManager :public Manager
 public:
 	void Handle(Request request)
 	{
-		if (request.GetType() == Request_Type::AskForLeave && request.GetNum() <= 2)
+		if (request.GetType() == AskForLeave && request.GetNum() <= 2)
 		{
 			printf("�������죬��Ŀ������׼����\n");
 		}
@@ -80,9 +80,9 @@ class MajorManager : public Manager
 public:
 	void Handle(Request request)
 	{
-		if (request.GetType() == Request_Type::AskForLeave && request.GetNum() > 2 || request.GetType() == Request_Type::AddSalary && request.GetNum() <= 500 )
+		if (request.GetType() == AskForLeave && request.GetNum() > 2 || request.GetType() == AddSalary && request.GetNum() <= 500 )
 		{
-			if (request.GetType() == Request_Type::AskForLeave)
+			if (request.GetType() == AskForLeave)
 			{
 				printf("���ٳ��������죬�ܼ���׼����\n");
 			}
@@ -107,7 +107,7 @@ class GeneralManager : public Manager
 public:
 	void Handle(Request request)
 	{
-		if (request.GetType() == Request_Type::AddSalary && request.GetNum() > 500)
+		if (request.GetType() == AddSalary && request.GetNum() > 500)
 		{
 			printf("��н����500���ܾ���û��׼/(��o��)/~~��\n");
 		}
