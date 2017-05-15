@@ -29,23 +29,23 @@ void TestSimpleFactory()
 	SimpleFactory factory;
 	Operation* oper = factory.CreateOperation("+");
 	oper->Set(1, 2);
-	printf_s("%lf\n",oper->GetResult());
+	printf("%lf\n",oper->GetResult());
 	factory.DeleteOperation();
 
 	// /
 	try {
 		factory.CreateOperation("/");
 		oper->Set(1, 2);
-		printf_s("%lf\n", oper->GetResult());
+		printf("%lf\n", oper->GetResult());
 		
 		oper->Set(1, 0);
-		printf_s("%lf\n", oper->GetResult());
+		printf("%lf\n", oper->GetResult());
 
 	}
 	//type must be match with throw
 	catch (char* e) 
 	{
-		printf_s("%s\n", e);
+		printf("%s\n", e);
 		factory.DeleteOperation();
 	}
 }

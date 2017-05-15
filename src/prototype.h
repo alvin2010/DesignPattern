@@ -1,9 +1,9 @@
 #pragma once
 
 
-//	原型模式（prototype）： 从一个对象
-//  再创建另外一个可定制对象
-//	注意：深浅复制
+//	原锟斤拷模式锟斤拷prototype锟斤拷锟斤拷 锟斤拷一锟斤拷锟斤拷锟斤拷
+//  锟劫达拷锟斤拷锟斤拷锟斤拷一锟斤拷锟缴讹拷锟狡讹拷锟斤拷
+//	注锟解：锟斤拷浅锟斤拷锟斤拷
 
 
 class ProtoType
@@ -71,8 +71,8 @@ public:
 
 	void Display()
 	{
-		printf_s("name:%s\nsex:%s\nage:%s\n",name_.c_str(), sex_.c_str(), age_.c_str());
-		printf_s("experience:%s\n", exp_.c_str());
+		printf("name:%s\nsex:%s\nage:%s\n",name_.c_str(), sex_.c_str(), age_.c_str());
+		printf("experience:%s\n", exp_.c_str());
 	}
 
 	IClone* Clone()

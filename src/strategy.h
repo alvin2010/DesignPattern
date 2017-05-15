@@ -1,8 +1,8 @@
 #pragma once
 
-//	策略模式（strategy）：定义算法家族，
-//	每一种策略对应一种算法, 算法之间可以
-//	相互替换
+//	锟斤拷锟斤拷模式锟斤拷strategy锟斤拷锟斤拷锟斤拷锟斤拷锟姐法锟斤拷锟藉，
+//	每一锟街诧拷锟皆讹拷应一锟斤拷锟姐法, 锟姐法之锟斤拷锟斤拷锟斤拷
+//	锟洁互锟芥换
 
 
 class CashSuper
@@ -17,17 +17,17 @@ class CashNormal : public CashSuper
 public:
 	void AcceptCash()
 	{
-		printf_s("Normal Cash \n");
+		printf("Normal Cash \n");
 	}
 };
 
-//回扣类
+//锟截匡拷锟斤拷
 class CashRebate : public CashSuper
 {
 public:
 	void AcceptCash()
 	{
-		printf_s("Rebate Cash \n");
+		printf("Rebate Cash \n");
 	}
 };
 
@@ -37,7 +37,7 @@ class CashReturn : public CashSuper
 public:
 	void AcceptCash()
 	{
-		printf_s("Return Cash \n");
+		printf("Return Cash \n");
 	}
 };
 

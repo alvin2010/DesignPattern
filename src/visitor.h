@@ -18,12 +18,12 @@ class Success : public Action
 public:
 	void GetManConclusion()
 	{
-		printf_s("男人成功，背后有一个伟大的女人！\n");
+		printf("锟斤拷锟剿成癸拷锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷伟锟斤拷锟斤拷女锟剿ｏ拷\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf_s("女人成功，背后有一个伟大的男人！\n");
+		printf("女锟剿成癸拷锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷伟锟斤拷锟斤拷锟斤拷锟剿ｏ拷\n");
 	}
 };
 
@@ -33,12 +33,12 @@ class Failure : public Action
 public:
 	void GetManConclusion()
 	{
-		printf_s("男人失败找原因！\n");
+		printf("锟斤拷锟斤拷失锟斤拷锟斤拷原锟斤拷锟斤拷\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf_s("女人失败找借口！\n");
+		printf("女锟斤拷失锟斤拷锟揭斤拷锟节ｏ拷\n");
 	}
 };
 

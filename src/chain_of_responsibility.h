@@ -2,7 +2,7 @@
 #define CHAIN_OF_RESPONSIBILITY_H_
 #include <cstdio>
 
-//	Ö°ÔðÁ´Ä£Ê½£¨chain of responsibility£©£º
+//	Ö°ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½chain of responsibilityï¿½ï¿½ï¿½ï¿½
 //
 //
 
@@ -62,7 +62,7 @@ public:
 	{
 		if (request.GetType() == Request_Type::AskForLeave && request.GetNum() <= 2)
 		{
-			printf_s("Çë¼ÙÁ½Ìì£¬ÏîÄ¿¾­ÀíÅú×¼À²£¡\n");
+			printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½\n");
 		}
 		else
 		{
@@ -84,11 +84,11 @@ public:
 		{
 			if (request.GetType() == Request_Type::AskForLeave)
 			{
-				printf_s("Çë¼Ù³¬¹ýÁ½ÌìÌì£¬×Ü¼àÅú×¼À²£¡\n");
+				printf("ï¿½ï¿½ï¿½Ù³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì£¬ï¿½Ü¼ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½\n");
 			}
 			else
 			{
-				printf_s("¼ÓÐ½Ð¡ÓÚ500£¬ÏîÄ¿¾­ÀíÅú×¼À²£¡\n");
+				printf("ï¿½ï¿½Ð½Ð¡ï¿½ï¿½500ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½\n");
 			}
 		}
 		else
@@ -109,7 +109,7 @@ public:
 	{
 		if (request.GetType() == Request_Type::AddSalary && request.GetNum() > 500)
 		{
-			printf_s("¼ÓÐ½³¬¹ý500£¬×Ü¾­ÀíÃ»Åú×¼/(¨Òo¨Ò)/~~£¡\n");
+			printf("ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½500ï¿½ï¿½ï¿½Ü¾ï¿½ï¿½ï¿½Ã»ï¿½ï¿½×¼/(ï¿½ï¿½oï¿½ï¿½)/~~ï¿½ï¿½\n");
 		}
 		else
 		{

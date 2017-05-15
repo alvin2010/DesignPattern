@@ -3,8 +3,8 @@
 #include <cstring>
 using namespace std;
 
-//	Ä£°å·½·¨£¨Template_factory£©£º×ÓÀà¿ÉÒÔ²»¸Ä±ä
-//	Ëã·¨µÄ½á¹¹¼´¿ÉÖØ¶¨ÒåÄ³Ð©ÌØ¶¨µÄ²½Öè
+//	Ä£ï¿½å·½ï¿½ï¿½ï¿½ï¿½Template_factoryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½Ä±ï¿½
+//	ï¿½ã·¨ï¿½Ä½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ä³Ð©ï¿½Ø¶ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
 //
 
 class TestPaper
@@ -14,17 +14,17 @@ public:
 
 	void Question1()
 	{
-		printf_s("Question1's answer is: %s\n", Answer1().c_str());
+		printf("Question1's answer is: %s\n", Answer1().c_str());
 	}
 
 	void Question2()
 	{
-		printf_s("Question2's answer is: %s\n", Answer2().c_str());
+		printf("Question2's answer is: %s\n", Answer2().c_str());
 	}
 
 	void Question3()
 	{
-		printf_s("Question3's answer is: %s\n", Answer3().c_str());
+		printf("Question3's answer is: %s\n", Answer3().c_str());
 	}
 
 	virtual string Answer1() = 0;

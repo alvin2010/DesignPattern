@@ -3,9 +3,9 @@
 
 #include <cstdio>
 
-//	¹¤³§·½·¨£¨factory_method£©: ÈÃ¿Í»§¶Ë
-//	À´¾ö¶¨ÊµÏÖÄÄÒ»¸öÀà£¬°Ñ¼òµ¥¹¤³§µÄÄÚ²¿
-//	ÅÐ¶ÏÂß¼­×ªÒÆµ½¿Í»§¶Ë
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½factory_methodï¿½ï¿½: ï¿½Ã¿Í»ï¿½ï¿½ï¿½
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½à£¬ï¿½Ñ¼òµ¥¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½
+//	ï¿½Ð¶ï¿½ï¿½ß¼ï¿½×ªï¿½Æµï¿½ï¿½Í»ï¿½ï¿½ï¿½
 
 class LeiFeng
 {
@@ -28,18 +28,18 @@ public:
 
 	virtual void Sweep()
 	{
-		printf_s("Volunteer sweep\n");
+		printf("Volunteer sweep\n");
 	}
 
 	virtual void Sing()
 	{
-		printf_s("Volunteer sing\n");
+		printf("Volunteer sing\n");
 	}
 
 
 	virtual void Wash()
 	{
-		printf_s("Volunteer wash\n");
+		printf("Volunteer wash\n");
 	}
 };
 
@@ -51,18 +51,18 @@ public:
 
 	virtual void Sweep()
 	{
-		printf_s("Sweep sweep\n");
+		printf("Sweep sweep\n");
 	}
 
 	virtual void Sing()
 	{
-		printf_s("Sweep sing\n");
+		printf("Sweep sing\n");
 	}
 
 
 	virtual void Wash()
 	{
-		printf_s("Sweep wash\n");
+		printf("Sweep wash\n");
 	}
 };
 

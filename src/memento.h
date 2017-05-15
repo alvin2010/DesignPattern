@@ -2,8 +2,8 @@
 #define MEMENTO_H_
 #include <cstdio>
 
-//	±¸ÍüÂ¼Ä£Ê½£¨memento£©£ºÔÚ²»ÆÆ»µ·â×°µÄÇé¿öÏÂ
-//	½«Ò»¸ö¶ÔÏóµÄ×´Ì¬±£´æ£¬ÕâÑù¾Í¿ÉÒÔ»Ö¸´Ô­À´×´Ì¬
+//	ï¿½ï¿½ï¿½ï¿½Â¼Ä£Ê½ï¿½ï¿½mementoï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½Æ»ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½æ£¬ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½Ô»Ö¸ï¿½Ô­ï¿½ï¿½×´Ì¬
 //
 
 class Memento
@@ -56,7 +56,7 @@ private:
 public:
 	void ShowState()
 	{
-		printf_s("life: %d, attack: %d, defense: %d",life_, attack_, defense_);
+		printf("life: %d, attack: %d, defense: %d",life_, attack_, defense_);
 	}
 
 

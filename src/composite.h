@@ -4,8 +4,8 @@
 #include <list>
 #include <string>
 using namespace std;
-//	组合模式（composite）： 将对象组合成树形结构表示
-//	使单个对象和组合对象的使用具有一致性
+//	锟斤拷锟斤拷模式锟斤拷composite锟斤拷锟斤拷 锟斤拷锟斤拷锟斤拷锟斤拷锟较筹拷锟斤拷锟轿结构锟斤拷示
+//	使锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟较讹拷锟斤拷锟斤拷使锟矫撅拷锟斤拷一锟斤拷锟斤拷
 //
 
 
@@ -42,7 +42,7 @@ public:
 
 	void Display()
 	{
-		printf_s("company %s\n", name_.c_str());
+		printf("company %s\n", name_.c_str());
 		for (list<Company*>::iterator it = companies_.begin(); companies_.end() != it; it++)
 		{
 			(*it)->Display();
@@ -72,12 +72,12 @@ public:
 
 	void Display()
 	{
-		printf_s("department %s\n", name_.c_str());
+		printf("department %s\n", name_.c_str());
 	}
 
 	void OnDuty()
 	{
-		printf_s("Hr Duty is Hr\n");
+		printf("Hr Duty is Hr\n");
 	}
 
 };
@@ -95,12 +95,12 @@ public:
 
 	void Display()
 	{
-		printf_s("department %s\n", name_.c_str());
+		printf("department %s\n", name_.c_str());
 	}
 
 	void OnDuty()
 	{
-		printf_s("Finance Duty is Finance\n");
+		printf("Finance Duty is Finance\n");
 	}
 };
 

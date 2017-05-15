@@ -2,8 +2,8 @@
 #define ADAPTER_H_
 #include <cstdio>
 
-//	ÊÊÅäÆ÷Ä£Ê½£¨adapter£©£º½«Ò»¸öÀàµÄ½Ó¿Ú
-//	×ª»»³É¿Í»§ËùÐèÒªµÄÁíÍâÒ»¸ö½Ó¿Ú
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½adapterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+//	×ªï¿½ï¿½ï¿½É¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ó¿ï¿½
 //
 
 
@@ -21,12 +21,12 @@ class Forward : public Player
 public:
 	void Defense()
 	{
-		printf_s("Forward Defense\n");
+		printf("Forward Defense\n");
 	}
 
 	void Attack()
 	{
-		printf_s("Forward Attack\n");
+		printf("Forward Attack\n");
 	}
 
 };
@@ -37,12 +37,12 @@ class Center : public Player
 public:
 	void Defense()
 	{
-		printf_s("Center Defense\n");
+		printf("Center Defense\n");
 	}
 
 	void Attack()
 	{
-		printf_s("Center Attack\n");
+		printf("Center Attack\n");
 	}
 };
 
@@ -52,12 +52,12 @@ class Guard : public Player
 public:
 	void Defense()
 	{
-		printf_s("Guard Defense\n");
+		printf("Guard Defense\n");
 	}
 
 	void Attack()
 	{
-		printf_s("Guard Attack\n");
+		printf("Guard Attack\n");
 	}
 };
 
@@ -67,12 +67,12 @@ class ForeignCenter : public Player
 public:
 	void Defense()
 	{
-		printf_s("ForeignCenter Defense\n");
+		printf("ForeignCenter Defense\n");
 	}
 
 	void Attack()
 	{
-		printf_s("ForeignCenter Attack\n");
+		printf("ForeignCenter Attack\n");
 	}
 };
 

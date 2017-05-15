@@ -2,8 +2,8 @@
 #include <cstdio>
 #include <string>
 using namespace std;
-//	代理模式（Proxy）： 为其他对象提供代理
-//	以控制这个对象的访问权限
+//	锟斤拷锟斤拷模式锟斤拷Proxy锟斤拷锟斤拷 为锟斤拷锟斤拷锟斤拷锟斤拷锟结供锟斤拷锟斤拷
+//	锟皆匡拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥凤拷锟斤拷权锟斤拷
 //
 
 class IPersuer
@@ -21,18 +21,18 @@ class Persuer : public IPersuer
 public:
 	void SendFlower()
 	{
-		printf_s("Send Flower\n");
+		printf("Send Flower\n");
 	}
 
 
 	void SendFood()
 	{
-		printf_s("Send Food\n");
+		printf("Send Food\n");
 	}
 
 	void TellJoker()
 	{
-		printf_s("Tell Joker\n");
+		printf("Tell Joker\n");
 	}
 };
 

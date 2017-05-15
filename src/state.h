@@ -1,8 +1,8 @@
 #ifndef STATE_H_
 #define STATE_H_
 #include <cstdio>
-//	状态模式（state）：一个对象的内在状态改变时
-//	改变了其行为，这个对象看起来像是改变了其类
+//	状态模式锟斤拷state锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷状态锟侥憋拷时
+//	锟侥憋拷锟斤拷锟斤拷锟斤拷为锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟角改憋拷锟斤拷锟斤拷锟斤拷
 //
 class State;
 
@@ -71,7 +71,7 @@ class RestState :public State
 public:
 	void WriteProgram(Work* work)
 	{
-		printf_s("Rest state\n");
+		printf("Rest state\n");
 	}
 };
 

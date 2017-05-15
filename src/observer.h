@@ -6,18 +6,18 @@
 using namespace std;
 
 
-//	观察者模式（Observer）：一对多的依赖关系
-//	让多个观察者监听同一个通知对象
+//	锟桔诧拷锟斤拷模式锟斤拷Observer锟斤拷锟斤拷一锟皆讹拷锟斤拷锟斤拷锟斤拷锟斤拷系
+//	锟矫讹拷锟斤拷锟桔诧拷锟竭硷拷锟斤拷同一锟斤拷通知锟斤拷锟斤拷
 
 
-//	观察者
+//	锟桔诧拷锟斤拷
 class Observer
 {
 public:
 	virtual void Update() = 0;
 };
 
-//	通知者
+//	通知锟斤拷
 class Subject
 {
 public:
@@ -76,7 +76,7 @@ public:
 	void Update()
 	{
 		status_ = sub_.GetState();
-		printf_s("%s\n",sub_.GetState().c_str());
+		printf("%s\n",sub_.GetState().c_str());
 	}
 
 	ConcreteObserver(string name) : name_(name){}

@@ -2,8 +2,8 @@
 #define ABSTRACT_FACTORY_H_
 #include <cstdio>
 
-//	³éÏó¹¤³§£¨abstract_factory£©£ºÌá¹©Ò»ÏµÁÐ
-//  Ïà¹Ø»òÏà»¥ÒÀÀµ¶ÔÏóµÄ½Ó¿Ú,±ãÓÚ½»»»²úÆ·ÏµÁÐ
+//	ï¿½ï¿½ï¿½ó¹¤³ï¿½ï¿½ï¿½abstract_factoryï¿½ï¿½ï¿½ï¿½ï¿½á¹©Ò»Ïµï¿½ï¿½
+//  ï¿½ï¿½ï¿½Ø»ï¿½ï¿½à»¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½,ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·Ïµï¿½ï¿½
 //
 
 class User
@@ -27,11 +27,11 @@ class SqlUser : public User
 public:
 	void GetUser()
 	{
-		printf_s("Sql Get User!\n");
+		printf("Sql Get User!\n");
 	}
 	void SetUser()
 	{
-		printf_s("Sql Set User!\n");
+		printf("Sql Set User!\n");
 	}
 };
 
@@ -41,11 +41,11 @@ class AccessUser : public User
 public:
 	void GetUser()
 	{
-		printf_s("Access Get User!\n");
+		printf("Access Get User!\n");
 	}
 	void SetUser()
 	{
-		printf_s("Sql Set User!\n");
+		printf("Sql Set User!\n");
 	}
 
 };
@@ -55,11 +55,11 @@ class SqlDepartment : public Department
 public:
 	void SetDepartment()
 	{
-		printf_s("Sql Set Department!\n");
+		printf("Sql Set Department!\n");
 	}
 	void GetDepartment()
 	{
-		printf_s("Sql Get Department!\n");
+		printf("Sql Get Department!\n");
 	}
 };
 
@@ -69,11 +69,11 @@ class AccessDepartment : public Department
 public:
 	void SetDepartment()
 	{
-		printf_s("Access Set Department!\n");
+		printf("Access Set Department!\n");
 	}
 	void GetDepartment()
 	{
-		printf_s("Access Get Department!\n");
+		printf("Access Get Department!\n");
 	}
 };
 

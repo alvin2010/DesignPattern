@@ -31,7 +31,7 @@ void ForenoonState::WriteProgram(Work* work)
 {
 	if (work->GetHour() < 12)
 	{
-		printf_s("forenoon work state\n");
+		printf("forenoon work state\n");
 	}
 	else
 	{
@@ -47,7 +47,7 @@ void NoonState::WriteProgram(Work* work)
 {
 	if (work->GetHour() < 13)
 	{
-		printf_s("noon work state\n");
+		printf("noon work state\n");
 	}
 	else
 	{
@@ -63,7 +63,7 @@ void AfternoonState::WriteProgram(Work* work)
 {
 	if (work->GetHour() < 17)
 	{
-		printf_s("AfternoonState work state\n");
+		printf("AfternoonState work state\n");
 	}
 	else
 	{
@@ -79,7 +79,7 @@ void EveningState::WriteProgram(Work* work)
 {
 	if (work->GetHour() < 21)
 	{
-		printf_s("EveningState work state\n");
+		printf("EveningState work state\n");
 	}
 	else
 	{
@@ -95,7 +95,7 @@ void SleepingState::WriteProgram(Work* work)
 {
 	if (work->GetHour() < 22)
 	{
-		printf_s("Sleeping state\n");
+		printf("Sleeping state\n");
 	}
 	else
 	{

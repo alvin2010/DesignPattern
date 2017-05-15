@@ -4,8 +4,8 @@
 #include <string>
 #include <map>
 using namespace std;
-//	享元模式（flyweight）：运用共享技术支持
-//	大量细粒度对象
+//	锟斤拷元模式锟斤拷flyweight锟斤拷锟斤拷锟斤拷锟矫癸拷锟斤拷锟斤拷锟斤拷支锟斤拷
+//	锟斤拷锟斤拷细锟斤拷锟饺讹拷锟斤拷
 //
 
 class Website
@@ -29,7 +29,7 @@ public:
 
 	void Use()
 	{
-		printf_s("网站分类: %s\n", name_.c_str());
+		printf("锟斤拷站锟斤拷锟斤拷: %s\n", name_.c_str());
 	}
 };
 

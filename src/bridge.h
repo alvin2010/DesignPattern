@@ -1,8 +1,8 @@
 #pragma once
 
 
-//	桥接模式（bridge）： 抽象部分和实现部分相分离
-//	使他们都可以独立变化
+//	锟脚斤拷模式锟斤拷bridge锟斤拷锟斤拷 锟斤拷锟襟部分猴拷实锟街诧拷锟斤拷锟斤拷锟斤拷锟斤拷
+//	使锟斤拷锟角讹拷锟斤拷锟皆讹拷锟斤拷锟戒化
 // 
 
 
@@ -18,7 +18,7 @@ class Game : public HandSoft
 public:
 	void Run()
 	{
-		printf_s("Game Run \n");
+		printf("Game Run \n");
 	}
 };
 
@@ -27,7 +27,7 @@ class AddressList : public HandSoft
 public:
 	void Run()
 	{
-		printf_s("AddressList Run \n");
+		printf("AddressList Run \n");
 	}
 };
 

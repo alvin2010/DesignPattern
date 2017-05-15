@@ -4,8 +4,8 @@
 #include <list>
 using namespace std;
 
-//  命令模式（command）：将请求封装成一个对象
-//	对请求排队或记录日志，以及支持可撤销
+//  锟斤拷锟斤拷模式锟斤拷command锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷装锟斤拷一锟斤拷锟斤拷锟斤拷
+//	锟斤拷锟斤拷锟斤拷锟脚队伙拷锟斤拷录锟斤拷志锟斤拷锟皆硷拷支锟街可筹拷锟斤拷
 //
 
 class Barbecuer
@@ -13,12 +13,12 @@ class Barbecuer
 public:
 	void BarbecueMatton()
 	{
-		printf_s("烤羊肉\n");
+		printf("锟斤拷锟斤拷锟斤拷\n");
 	}
 
 	void BarbecueChick()
 	{
-		printf_s("烤鸡翅\n");
+		printf("锟斤拷锟斤拷锟斤拷\n");
 	}
 };
 
