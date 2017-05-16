@@ -137,6 +137,14 @@ void TestTemplatemethod()
 	delete p2;
 }
 
+void TestFacade()
+{
+	Method m;
+	m.Method1();
+	m.Method2();
+	m.Method3();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -153,6 +161,8 @@ int main(int argc, char* argv[])
 	TestPrototype();
 
 	TestTemplatemethod();
+
+	TestFacade();
 
 	return 0;
 }
