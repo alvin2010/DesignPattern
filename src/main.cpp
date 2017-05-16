@@ -145,6 +145,18 @@ void TestFacade()
 	m.Method3();
 }
 
+void TestBuilder()
+{
+	PersonFat fat;
+	PersonThin thin;
+	PersonDirctor director(&fat);
+	director.CreatePerson();
+
+	PersonDirctor director1(&thin);
+	director1.CreatePerson();
+
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -163,6 +175,8 @@ int main(int argc, char* argv[])
 	TestTemplatemethod();
 
 	TestFacade();
+
+	TestBuilder();
 
 	return 0;
 }
