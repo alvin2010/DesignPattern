@@ -4,8 +4,8 @@
 #include <list>
 #include <string>
 using namespace std;
-//	����ģʽ��composite���� ���������ϳ����νṹ��ʾ
-//	ʹ�������������϶�����ʹ�þ���һ����
+//
+//
 //
 
 

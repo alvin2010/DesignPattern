@@ -2,8 +2,7 @@
 #define MEMENTO_H_
 #include <cstdio>
 
-//	����¼ģʽ��memento�����ڲ��ƻ���װ��������
-//	��һ��������״̬���棬�����Ϳ��Իָ�ԭ��״̬
+//
 //
 
 class Memento

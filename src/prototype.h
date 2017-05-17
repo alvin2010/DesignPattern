@@ -1,9 +1,7 @@
 #pragma once
 
 
-//	ԭ��ģʽ��prototype���� ��һ������
-//  �ٴ�������һ���ɶ��ƶ���
-//	ע�⣺��ǳ����
+
 
 
 class ProtoType

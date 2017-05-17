@@ -3,9 +3,7 @@
 #include <cstring>
 using namespace std;
 
-//	ģ�巽����Template_factory�����������Բ��ı�
-//	�㷨�Ľṹ�����ض���ĳЩ�ض��Ĳ���
-//
+
 
 class TestPaper
 {

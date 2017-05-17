@@ -1,8 +1,5 @@
 #pragma once
 
-//	����ģʽ��strategy���������㷨���壬
-//	ÿһ�ֲ��Զ�Ӧһ���㷨, �㷨֮������
-//	�໥�滻
 
 
 class CashSuper
@@ -21,7 +18,7 @@ public:
 	}
 };
 
-//�ؿ���
+
 class CashRebate : public CashSuper
 {
 public:

@@ -4,8 +4,8 @@
 #include <string>
 #include <map>
 using namespace std;
-//	��Ԫģʽ��flyweight�������ù�������֧��
-//	����ϸ���ȶ���
+//	
+//	
 //
 
 class Website
@@ -29,7 +29,7 @@ public:
 
 	void Use()
 	{
-		printf("��վ����: %s\n", name_.c_str());
+		printf(": %s\n", name_.c_str());
 	}
 };
 

@@ -2,8 +2,8 @@
 #define ABSTRACT_FACTORY_H_
 #include <cstdio>
 
-//	���󹤳���abstract_factory�����ṩһϵ��
-//  ���ػ��໥���������Ľӿ�,���ڽ�����Ʒϵ��
+//	
+//  
 //
 
 class User
@@ -112,6 +112,5 @@ class SqlFactory : public Factory
 		return new SqlUser();
 	}
 };
-
 
 #endif

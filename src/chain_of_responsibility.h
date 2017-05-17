@@ -2,7 +2,7 @@
 #define CHAIN_OF_RESPONSIBILITY_H_
 #include <cstdio>
 
-//	ְ����ģʽ��chain of responsibility����
+//	
 //
 //
 
@@ -62,7 +62,7 @@ public:
 	{
 		if (request.GetType() == AskForLeave && request.GetNum() <= 2)
 		{
-			printf("�������죬��Ŀ������׼����\n");
+			printf("\n");
 		}
 		else
 		{
@@ -84,11 +84,11 @@ public:
 		{
 			if (request.GetType() == AskForLeave)
 			{
-				printf("���ٳ��������죬�ܼ���׼����\n");
+				printf("\n");
 			}
 			else
 			{
-				printf("��нС��500����Ŀ������׼����\n");
+				printf("\n");
 			}
 		}
 		else
@@ -109,7 +109,7 @@ public:
 	{
 		if (request.GetType() == AddSalary && request.GetNum() > 500)
 		{
-			printf("��н����500���ܾ���û��׼/(��o��)/~~��\n");
+			printf("\n");
 		}
 		else
 		{

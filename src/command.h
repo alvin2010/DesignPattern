@@ -4,8 +4,8 @@
 #include <list>
 using namespace std;
 
-//  ����ģʽ��command������������װ��һ������
-//	�������Ŷӻ���¼��־���Լ�֧�ֿɳ���
+// 
+//	
 //
 
 class Barbecuer
@@ -13,12 +13,12 @@ class Barbecuer
 public:
 	void BarbecueMatton()
 	{
-		printf("������\n");
+		printf("\n");
 	}
 
 	void BarbecueChick()
 	{
-		printf("������\n");
+		printf("\n");
 	}
 };
 

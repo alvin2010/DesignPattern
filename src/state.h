@@ -1,8 +1,7 @@
 #ifndef STATE_H_
 #define STATE_H_
 #include <cstdio>
-//	״̬ģʽ��state����һ������������״̬�ı�ʱ
-//	�ı�������Ϊ�������������������Ǹı�������
+
 //
 class State;
 

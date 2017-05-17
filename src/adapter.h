@@ -2,9 +2,8 @@
 #define ADAPTER_H_
 #include <cstdio>
 
-//	������ģʽ��adapter������һ�����Ľӿ�
-//	ת���ɿͻ�����Ҫ������һ���ӿ�
-//
+
+
 
 
 class Player

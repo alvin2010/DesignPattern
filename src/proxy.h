@@ -2,9 +2,8 @@
 #include <cstdio>
 #include <string>
 using namespace std;
-//	����ģʽ��Proxy���� Ϊ���������ṩ����
-//	�Կ������������ķ���Ȩ��
-//
+
+
 
 class IPersuer
 {

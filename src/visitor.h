@@ -18,12 +18,12 @@ class Success : public Action
 public:
 	void GetManConclusion()
 	{
-		printf("���˳ɹ���������һ��ΰ����Ů�ˣ�\n");
+		printf("\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf("Ů�˳ɹ���������һ��ΰ�������ˣ�\n");
+		printf("\n");
 	}
 };
 
@@ -33,12 +33,12 @@ class Failure : public Action
 public:
 	void GetManConclusion()
 	{
-		printf("����ʧ����ԭ����\n");
+		printf("\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf("Ů��ʧ���ҽ��ڣ�\n");
+		printf("\n");
 	}
 };
 
