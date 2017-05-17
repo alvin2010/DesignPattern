@@ -157,6 +157,23 @@ void TestBuilder()
 
 }
 
+void TestObserver()
+{
+	ConcreteSub sub;
+	ConcreteObserver ob1("observer 1");
+	ConcreteObserver ob2("observer 2");
+	ConcreteObserver ob3("observer 3");
+	sub.Attach(&ob1);
+	sub.Attach(&ob2);
+	sub.Attach(&ob3);
+	ob1.SetSub(&sub);
+	ob2.SetSub(&sub);
+	ob3.SetSub(&sub);
+	sub.SetState("boss is coming!\n");
+	sub.Notify();
+
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -177,6 +194,8 @@ int main(int argc, char* argv[])
 	TestFacade();
 
 	TestBuilder();
+
+	TestObserver();
 
 	return 0;
 }

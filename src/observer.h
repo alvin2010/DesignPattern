@@ -6,18 +6,19 @@
 using namespace std;
 
 
-//	锟桔诧拷锟斤拷模式锟斤拷Observer锟斤拷锟斤拷一锟皆讹拷锟斤拷锟斤拷锟斤拷锟斤拷系
-//	锟矫讹拷锟斤拷锟桔诧拷锟竭硷拷锟斤拷同一锟斤拷通知锟斤拷锟斤拷
+//	观察者模式（observer）：让多个观察者对象同时
+//	监听同一个主题对象，当主题对象状态发生变化时，
+//	能够通知所有的观察者
 
 
-//	锟桔诧拷锟斤拷
+//	观察者
 class Observer
 {
 public:
 	virtual void Update() = 0;
 };
 
-//	通知锟斤拷
+//	通知者
 class Subject
 {
 public:
@@ -53,7 +54,7 @@ public:
 		}
 	}
 
-	void SetState(string s)
+	void SetState(const char* s)
 	{
 		status_ = s;
 	}
@@ -69,23 +70,23 @@ public:
 class ConcreteObserver : public Observer
 {
 private:
-	ConcreteSub sub_;
+	ConcreteSub* sub_;
 	string name_;
 	string status_;
 public:
 	void Update()
 	{
-		status_ = sub_.GetState();
-		printf("%s\n",sub_.GetState().c_str());
+		status_ = sub_->GetState();
+		printf("%s",sub_->GetState().c_str());
 	}
 
-	ConcreteObserver(string name) : name_(name){}
-	void SetSub(ConcreteSub sub)
+	ConcreteObserver(const char* name) : name_(name){}
+	void SetSub(ConcreteSub* sub)
 	{
 		sub_ = sub;
 	}
 
-	ConcreteSub GetSub()
+	ConcreteSub* GetSub()
 	{
 		return sub_;
 	}
