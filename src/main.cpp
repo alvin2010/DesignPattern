@@ -174,6 +174,34 @@ void TestObserver()
 
 }
 
+void TestAbstractFactory()
+{
+	AccessFactory fac;
+	Department* dep = fac.CreateDepartment();
+	dep->GetDepartment();
+	dep->SetDepartment();
+	fac.ReleaseDepartment(dep);
+
+
+	User* user = fac.CreateUser();
+	user->GetUser();
+	user->SetUser();
+	fac.ReleaseUser(user);
+
+
+	SqlFactory fac1;
+	Department* dep1 = fac1.CreateDepartment();
+	dep1->GetDepartment();
+	dep1->SetDepartment();
+	fac1.ReleaseDepartment(dep1);
+
+
+	User* user1 = fac1.CreateUser();
+	user1->GetUser();
+	user1->SetUser();
+	fac1.ReleaseUser(user1);
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -196,6 +224,8 @@ int main(int argc, char* argv[])
 	TestBuilder();
 
 	TestObserver();
+
+	TestAbstractFactory();
 
 	return 0;
 }

@@ -3,8 +3,8 @@
 
 #include <cstdio>
 
-//	
-//	
+//	工厂方法（factory_method）：定义一个创建对象的
+//	接口，让子类决定实例化哪一个类
 //
 
 class LeiFeng

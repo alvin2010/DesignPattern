@@ -2,8 +2,8 @@
 #define ABSTRACT_FACTORY_H_
 #include <cstdio>
 
-//	
-//  
+//	抽象工厂（abstract_factory）：定义一个创建一系列
+//  相关联类实例的接口，而无需指定他们具体类
 //
 
 class User
@@ -19,6 +19,7 @@ class Department
 public:
 	virtual void SetDepartment() = 0;
 	virtual void GetDepartment() = 0;
+	virtual ~Department(){}
 };
 
 
@@ -33,6 +34,8 @@ public:
 	{
 		printf("Sql Set User!\n");
 	}
+
+	virtual ~SqlUser() {}
 };
 
 
@@ -48,6 +51,7 @@ public:
 		printf("Sql Set User!\n");
 	}
 
+	virtual ~AccessUser(){}
 };
 
 class SqlDepartment : public Department
@@ -61,6 +65,8 @@ public:
 	{
 		printf("Sql Get Department!\n");
 	}
+
+	virtual ~SqlDepartment(){}
 };
 
 
@@ -75,6 +81,8 @@ public:
 	{
 		printf("Access Get Department!\n");
 	}
+
+	virtual ~AccessDepartment(){}
 };
 
 class Factory
@@ -82,6 +90,8 @@ class Factory
 public:
 	virtual Department* CreateDepartment() = 0;
 	virtual User* CreateUser() = 0;
+	virtual void ReleaseDepartment(Department* dep) = 0;
+	virtual void ReleaseUser(User* user) = 0;
 };
 
 
@@ -93,23 +103,44 @@ public:
 		return new AccessDepartment();
 	}
 
+	void ReleaseDepartment(Department* dep)
+	{
+		delete dep;
+	}
+
 	User* CreateUser()
 	{
 		return new AccessUser();
+	}
+
+	void ReleaseUser(User* user)
+	{
+		delete user;
 	}
 };
 
 
 class SqlFactory : public Factory
 {
+public:
 	Department* CreateDepartment()
 	{
 		return new SqlDepartment();
 	}
 
+	void ReleaseDepartment(Department* dep)
+	{
+		delete dep;
+	}
+
 	User* CreateUser()
 	{
 		return new SqlUser();
+	}
+
+	void ReleaseUser(User* user)
+	{
+		delete user;
 	}
 };
 
