@@ -12,6 +12,7 @@ private:
 	int hour_;
 public:
 	Work();
+	~Work();
 
 	void SetHour(int hour);
 	int GetHour();
@@ -27,6 +28,7 @@ class State
 {
 public:
 	virtual void WriteProgram(Work* work) {};
+	virtual ~State(){} 
 };
 
 

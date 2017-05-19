@@ -6,6 +6,14 @@ Work::Work()
 	state_ = new ForenoonState();
 }
 
+Work::~Work()
+{
+	if (state_ != NULL)
+	{
+		delete state_;
+	}
+}
+
 void Work::SetHour(int hour)
 {
 	hour_ = hour;

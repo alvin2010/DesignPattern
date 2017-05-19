@@ -202,6 +202,21 @@ void TestAbstractFactory()
 	fac1.ReleaseUser(user1);
 }
 
+void TestState()
+{
+	Work work;
+	work.WriteProgram();
+
+	work.SetHour(12);
+	work.WriteProgram();
+
+	work.SetHour(19);
+	work.WriteProgram();
+
+	work.SetHour(22);
+	work.WriteProgram();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -226,6 +241,8 @@ int main(int argc, char* argv[])
 	TestObserver();
 
 	TestAbstractFactory();
+
+	TestState();
 
 	return 0;
 }
