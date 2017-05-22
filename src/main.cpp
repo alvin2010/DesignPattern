@@ -217,6 +217,25 @@ void TestState()
 	work.WriteProgram();
 }
 
+void TestAdapter()
+{
+	Forward f;
+	f.Attack();
+	f.Defense();
+
+	Center c;
+	c.Attack();
+	c.Defense();
+
+	Guard g;
+	g.Attack();
+	g.Defense();
+
+	Translator t;
+	t.Attack();
+	t.Defense();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -243,6 +262,10 @@ int main(int argc, char* argv[])
 	TestAbstractFactory();
 
 	TestState();
+
+	TestAdapter();
+
+	system("pause");
 
 	return 0;
 }

@@ -3,7 +3,8 @@
 #include <cstdio>
 
 
-
+//	适配器模式（adapter）：将一个类的
+//	接口转换为客户希望的接口
 
 
 class Player
@@ -61,7 +62,7 @@ public:
 };
 
 
-class ForeignCenter : public Player
+class ForeignCenter
 {
 public:
 	void Defense()
