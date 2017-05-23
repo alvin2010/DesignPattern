@@ -2,8 +2,9 @@
 #define MEMENTO_H_
 #include <cstdio>
 
-//
-//
+//	备忘录模式（memento）：不破坏封装的前提下捕获
+//	对象的内部状态，并在该对象之外保存这些状态，以
+//	便以后恢复这些状态
 
 class Memento
 {
@@ -55,7 +56,7 @@ private:
 public:
 	void ShowState()
 	{
-		printf("life: %d, attack: %d, defense: %d",life_, attack_, defense_);
+		printf("life: %d, attack: %d, defense: %d\n",life_, attack_, defense_);
 	}
 
 
@@ -106,6 +107,15 @@ public:
 	Memento* GetMemento()
 	{
 		return memento_;
+	}
+
+	void Clear()
+	{
+		if (memento_)
+		{
+			delete memento_;
+			memento_ = NULL;
+		}
 	}
 };
 

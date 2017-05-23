@@ -236,6 +236,25 @@ void TestAdapter()
 	t.Defense();
 }
 
+void TestMemento()
+{
+	GameRole role;
+	role.SetInitState();
+	role.ShowState();
+
+	RoleStateManager manager;
+	manager.SetMemento(role.SaveState());
+
+	// fight
+	role.Fight();
+	role.ShowState();
+	
+	role.SetState(manager.GetMemento());
+	role.ShowState();
+
+	manager.Clear();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -264,6 +283,8 @@ int main(int argc, char* argv[])
 	TestState();
 
 	TestAdapter();
+
+	TestMemento();
 
 	system("pause");
 
