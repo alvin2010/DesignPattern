@@ -255,14 +255,33 @@ void TestMemento()
 	manager.Clear();
 }
 
+void TestComposite()
+{
+	ConcreteCompany com("腾讯总公司");
+	FinanceDepartment f("总公司财务部门");
+	HRDepartment h("总公司Hr部门");
+	com.Add(&f);
+	com.Add(&h);
+
+
+	ConcreteCompany com1("北京分公司");
+	FinanceDepartment f1("北京分公司财务部门");
+	HRDepartment h1("北京分公司Hr部门");
+	com1.Add(&f1);
+	com1.Add(&h1);
+	com.Add(&com1);
+
+	com.Display();
+}
+
 int main(int argc, char* argv[])
 {
 
-	//TestSimpleFactory();
+	TestSimpleFactory();
 
-	//TestStrategy();
+	TestStrategy();
 
-	//TestDecrator();
+	TestDecrator();
 
 	TestProxy();
 
@@ -285,6 +304,8 @@ int main(int argc, char* argv[])
 	TestAdapter();
 
 	TestMemento();
+
+	TestComposite();
 
 	system("pause");
 

@@ -4,8 +4,9 @@
 #include <list>
 #include <string>
 using namespace std;
-//
-//
+
+//	组合模式（composite）：使单个对象和组合对象
+//	的使用具有一致性
 //
 
 
@@ -30,12 +31,12 @@ public:
 		name_ = name;
 	}
 
-	void Add(ConcreteCompany com)
+	void Add(Company* com)
 	{
-		companies_.push_back(&com);
+		companies_.push_back(com);
 	}
 
-	void Remove(ConcreteCompany com)
+	void Remove(Company com)
 	{
 		companies_.remove(&com);
 	}
