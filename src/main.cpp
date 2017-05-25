@@ -274,6 +274,22 @@ void TestComposite()
 	com.Display();
 }
 
+void Testiterator()
+{
+	ConcreteAggregate con;
+	
+	for (int i = 0; i < 10; i++)
+	{
+		con.Insert(i);
+	}
+	
+	ConcreteIterator *it = con.CreateIterator();
+	printf("%d\n", it->First());
+	printf("%d\n", it->Next());
+	printf("%d\n", it->Current());
+	con.DeleteIterator(it);
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -306,6 +322,8 @@ int main(int argc, char* argv[])
 	TestMemento();
 
 	TestComposite();
+
+	Testiterator();
 
 	system("pause");
 

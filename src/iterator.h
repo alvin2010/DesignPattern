@@ -18,13 +18,6 @@ public:
 	virtual bool IsDone() = 0;
 };
 
-class Aggregate
-{
-public:
-	virtual Iterator* CreateIterator() = 0;
-};
-
-
 class ConcreteAggregate;
 class ConcreteIterator
 {
@@ -40,14 +33,19 @@ public:
 };
 
 
-class ConcreteAggregate : public Aggregate
+class ConcreteAggregate
 {
 private:
 	vector<int> vi;
 public:
-	Iterator* CreateIterator()
+	ConcreteIterator* CreateIterator()
 	{
-		new ConcreteIterator(this);
+		return new ConcreteIterator(this);
+	}
+
+	void DeleteIterator(ConcreteIterator* it)
+	{
+		delete it;
 	}
 
 	void Insert(int i)
