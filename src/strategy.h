@@ -1,6 +1,9 @@
 #pragma once
 
 
+//	策略模式（strategy）：算法家族，算法之间
+//	可以相互替换而不影响客户端。
+//	需要执行环境(context)
 
 class CashSuper
 {

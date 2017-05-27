@@ -290,6 +290,11 @@ void Testiterator()
 	con.DeleteIterator(it);
 }
 
+void TestSingleton()
+{
+	Singleton* sin = Singleton::GetInstance();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -324,6 +329,8 @@ int main(int argc, char* argv[])
 	TestComposite();
 
 	Testiterator();
+
+	TestSingleton();
 
 	system("pause");
 
