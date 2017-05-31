@@ -295,6 +295,24 @@ void TestSingleton()
 	Singleton* sin = Singleton::GetInstance();
 }
 
+void TestBridge()
+{
+	Game game;
+	AddressList add;
+
+	HandBrandM m;
+	m.SetSoft(&game);
+	m.Run();
+	m.SetSoft(&add);
+	m.Run();
+
+	HandBrandN n;
+	n.SetSoft(&game);
+	n.Run();
+	n.SetSoft(&add);
+	n.Run();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -331,6 +349,8 @@ int main(int argc, char* argv[])
 	Testiterator();
 
 	TestSingleton();
+
+	TestBridge();
 
 	system("pause");
 

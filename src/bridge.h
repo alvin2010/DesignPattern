@@ -1,9 +1,9 @@
 #pragma once
 
 
-//	
-// 
-
+//	桥接模式（bridge）：实现的方式有多种
+//	将这些实现独立出来，使他们各自变化而
+//	不影响其他功能
 
 
 class HandSoft
@@ -48,9 +48,9 @@ public:
 		soft_->Run();
 	}
 
-	void SetSoft(HandSoft soft)
+	void SetSoft(HandSoft* soft)
 	{
-		soft_ = &soft;
+		soft_ = soft;
 	}
 };
 
@@ -65,9 +65,9 @@ public:
 		soft_->Run();
 	}
 
-	void SetSoft(HandSoft soft)
+	void SetSoft(HandSoft* soft)
 	{
-		soft_ = &soft;
+		soft_ = soft;
 	}
 };
 
