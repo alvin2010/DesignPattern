@@ -313,6 +313,21 @@ void TestBridge()
 	n.Run();
 }
 
+void TestCommand()
+{
+	Barbecuer bar;
+	BarbecueChickCommand  chick(bar);
+	BarbecueMattonCommand matton(bar);
+	BarbecueMattonCommand matton1(bar);
+	BarbecueChickCommand chick1(bar);
+	Waiter w;
+	w.AddCommand(&chick);
+	w.AddCommand(&matton);
+	w.AddCommand(&matton1);
+	w.AddCommand(&chick1);
+	w.Notify();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -351,6 +366,8 @@ int main(int argc, char* argv[])
 	TestSingleton();
 
 	TestBridge();
+
+	TestCommand();
 
 	system("pause");
 

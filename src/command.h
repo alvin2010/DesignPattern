@@ -4,8 +4,8 @@
 #include <list>
 using namespace std;
 
-// 
-//	
+//	命令模式（command）：将请求封装成接口，根据客户不同的
+//	参数实例化不同的请求对象，并对请求排队。
 //
 
 class Barbecuer
@@ -13,12 +13,12 @@ class Barbecuer
 public:
 	void BarbecueMatton()
 	{
-		printf("\n");
+		printf("barbecue matton\n");
 	}
 
 	void BarbecueChick()
 	{
-		printf("\n");
+		printf("barbecue chick\n");
 	}
 };
 
@@ -35,6 +35,7 @@ class Waiter
 private:
 	list<Command*> lc;
 
+public:
 	void AddCommand(Command* command)
 	{
 		lc.push_back(command);
