@@ -328,6 +328,24 @@ void TestCommand()
 	w.Notify();
 }
 
+void TestChainofresponsibility()
+{
+	CommonManager cm;
+	MajorManager mm;
+	GeneralManager gm;
+	
+	cm.SetSuper(&mm);
+	mm.SetSuper(&gm);
+
+	Request req;
+	req.SetType(1);
+	req.SetNum(3);
+
+	cm.Handle(req);
+
+
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -368,6 +386,8 @@ int main(int argc, char* argv[])
 	TestBridge();
 
 	TestCommand();
+
+	TestChainofresponsibility();
 
 	system("pause");
 
