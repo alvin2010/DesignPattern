@@ -346,6 +346,19 @@ void TestChainofresponsibility()
 
 }
 
+void TestMediator()
+{
+	UNSecurityCouncil un;
+	US us(&un);
+	Iraq iraq(&un);
+
+	us.SetName("美国");
+	iraq.SetName("伊拉克");
+
+	us.Declare("我要干你了！");
+	iraq.Declare("干就干，谁怕谁！");
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -388,6 +401,8 @@ int main(int argc, char* argv[])
 	TestCommand();
 
 	TestChainofresponsibility();
+
+	TestMediator();
 
 	system("pause");
 

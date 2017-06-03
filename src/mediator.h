@@ -5,8 +5,8 @@
 using namespace std;
 
 
-//	中介者模式（mediator）：迪米特原则
-//		
+//	中介者模式（mediator）：用一个中介对象来封装
+//	各个对象的交互
 //
 
 class Country;
@@ -96,7 +96,7 @@ public:
 
 	void GetMessage(string msg)
 	{
-		printf("US get message: %s\n", msg.c_str());
+		printf("Iraq get message: %s\n", msg.c_str());
 	}
 };
 
