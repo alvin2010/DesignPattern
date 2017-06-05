@@ -359,6 +359,20 @@ void TestMediator()
 	iraq.Declare("干就干，谁怕谁！");
 }
 
+void TestFlyWeight()
+{
+	WebSiteFactory fact;
+	fact.GetConcreteWebsite("博客1");
+	fact.GetConcreteWebsite("博客2");
+	fact.GetConcreteWebsite("博客3");
+	fact.GetConcreteWebsite("网站1");
+	fact.GetConcreteWebsite("网站2");
+	fact.GetConcreteWebsite("网站3");
+
+	fact.Show();
+	fact.Clear();
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -403,6 +417,8 @@ int main(int argc, char* argv[])
 	TestChainofresponsibility();
 
 	TestMediator();
+
+	TestFlyWeight();
 
 	system("pause");
 

@@ -4,8 +4,8 @@
 #include <string>
 #include <map>
 using namespace std;
-//	
-//	
+//	享元模式（flyweight）：运用共享技术支持大量细粒度
+//	对象
 //
 
 class Website
@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void Use()
+	void Use(/*外部状态*/)
 	{
-		printf(": %s\n", name_.c_str());
+		printf("name: %s\n", name_.c_str());
 	}
 };
 
@@ -37,15 +37,15 @@ public:
 class WebSiteFactory
 {
 private:
-	map<string, Website*> flyweight;
+	map<string, Website*> flyweight_;
 public:
 
 	Website* GetConcreteWebsite(string key)
 	{
-		map<string, Website*>::iterator it = flyweight.find(key);
-		if (it == flyweight.end())
+		map<string, Website*>::iterator it = flyweight_.find(key);
+		if (it == flyweight_.end())
 		{
-			flyweight.insert(make_pair(key, new ConcreteWebsite(key)));
+			flyweight_.insert(make_pair(key, new ConcreteWebsite(key)));
 		}
 		else
 		{
@@ -54,9 +54,29 @@ public:
 
 	}
 
+
+	void Clear()
+	{
+		map<string, Website*>::iterator it = flyweight_.begin();
+		for (; it != flyweight_.end(); it++)
+		{
+			delete it->second;
+		}
+	}
+
+	void Show()
+	{
+		map<string, Website*>::iterator it = flyweight_.begin();
+		for (; it != flyweight_.end(); it++)
+		{
+			it->second->Use();
+		}
+	}
+
+
 	int GetCount()
 	{
-		return flyweight.size();
+		return flyweight_.size();
 	}
 };
 
