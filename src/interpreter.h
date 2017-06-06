@@ -28,29 +28,17 @@ public:
 class Express
 {
 public:
-	void Interpreter(PlayContent play)
-	{
-		string content = play.GetContent();
-		if (play.GetContent().size() != 0)
-		{
-			string key = content.substr(0,1);
-			string text = content.substr(1);
-			double value = 0.00;//stod(text);
-			Excute(key, value);
-		}
-	}
-
-	virtual void Excute(string key, double value) = 0;
+	virtual void Excute(char key, double value) = 0;
 };
 
 
 class Note : public Express
 {
 public:
-	void Excute(string key, double value)
+	void Excute(char key, double value)
 	{
 		int note = 0;
-		switch (key.at(0))
+		switch (key)
 		{
 		case 'A':
 			note = 1;
@@ -85,7 +73,7 @@ public:
 class Scale : public Express
 {
 public:
-	void Excute(string key, double value)
+	void Excute(char key, double value)
 	{
 		string scale = "";
 		switch (int(value))
@@ -93,10 +81,10 @@ public:
 		case 1:
 			scale = "µÕ“Ù";
 			break;
-		case 'B':
+		case 2:
 			scale = "÷–“Ù";
 			break;
-		case 'C':
+		case 3:
 			scale = "÷ÿ“Ù";
 			break;
 		default:

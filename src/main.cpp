@@ -373,6 +373,46 @@ void TestFlyWeight()
 	fact.Clear();
 }
 
+void TestInterpreter()
+{	
+	Express *express = NULL;
+	string content = "O1A1B1C1D2O3E2F2G3";
+	char key;
+	char value;
+	Note note;
+	Scale scale;
+	int size = content.size();
+	for (int i = 0; i < size; i += 2)
+	{
+		key = content.at(i);
+		value = content.at(i+1);
+		if (key == 'O')
+		{
+			express = &scale;
+		}
+		else
+		{
+			express = &note;
+		}
+		express->Excute(key, value-48);
+	}
+	
+}
+
+void TestVistor()
+{
+	Man man;
+	Woman woman;
+	Failure f;
+	Success s;
+
+	man.Accept(&f);
+	man.Accept(&s);
+
+	woman.Accept(&f);
+	woman.Accept(&s);
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -419,6 +459,10 @@ int main(int argc, char* argv[])
 	TestMediator();
 
 	TestFlyWeight();
+
+	TestInterpreter();
+
+	TestVistor();
 
 	system("pause");
 

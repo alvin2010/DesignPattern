@@ -18,12 +18,12 @@ class Success : public Action
 public:
 	void GetManConclusion()
 	{
-		printf("\n");
+		printf("男人成功，背后有一个伟大的女神\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf("\n");
+		printf("女人成功，背后有一个不成功的男人\n");
 	}
 };
 
@@ -33,12 +33,12 @@ class Failure : public Action
 public:
 	void GetManConclusion()
 	{
-		printf("\n");
+		printf("男人失败，找原因\n");
 	}
 
 	void GetWomanConclusion()
 	{
-		printf("\n");
+		printf("女人失败，找借口\n");
 	}
 };
 
